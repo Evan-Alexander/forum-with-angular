@@ -1,0 +1,9 @@
+<h2>This tag has id number: {{tagId}}</h2>
+<h3>{{tagToDisplay.title}}</h3>
+<h3>{{tagToDisplay.description}}</h3>
+<ul *ngFor="let post of tagToDisplay.posts">
+  <p>{{post.title}}</p>
+  <p>{{post.body}}</p>
+</ul>
+
+<app-new-post (newPostSender)="addPost($event)"></app-new-post>

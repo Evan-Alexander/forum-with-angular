@@ -1,0 +1,12 @@
+<h2>Home</h2>
+
+<div *ngFor="let tag of tags" (click)="goToDetailPage(tag)" class="panel panel-default">
+  <div class="panel-body">
+    <h3><em>{{tag.title}}</em> by {{tag.description}}</h3>
+    <ul *ngFor="let post of tag.posts">
+      <li>{{post.title}}</li>
+      <li>{{post.body}}</li>
+    </ul>
+
+  </div>
+</div>
